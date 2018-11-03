@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { UIModule } from './ui.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,12 +1,12 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field> 
-  <button mat-flat-button>Submit</button>
-</form>
+<div> 
+  <form>
+    <label>Mnemonic n°3:
+      <mat-form-field>
+        <input matInput placeholder="mnemonic" #mnemonic>
+      </mat-form-field>
+    </label>
+    <button (click)="submit(mnemonic.value)">submit</button>
+  </form>
+</div>
 
 
