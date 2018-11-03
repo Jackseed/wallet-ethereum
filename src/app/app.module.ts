@@ -7,6 +7,9 @@ import { TransactionComponent } from './wallet/containers/transaction/transactio
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { UIModule } from './ui.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,13 @@ import { AppRoutingModule } from './app-routing.module';
     MnemonicComponent,
     VerificationComponent,
     WalletComponent,
-    TransactionComponent
+    TransactionComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    UIModule
   ],
   providers: [],
   bootstrap: [AppComponent]
