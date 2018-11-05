@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { UIModule } from './ui.module';
 
 
@@ -24,7 +25,8 @@ import { UIModule } from './ui.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    UIModule
+    UIModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
