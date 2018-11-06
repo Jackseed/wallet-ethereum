@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { VerificationComponent } from '../verification.component';
-
+import {PageEvent} from '@angular/material';
 
 export interface Mnemonic {
   id: number;
@@ -20,6 +20,9 @@ export class MobileVerificationComponent extends VerificationComponent implement
     {id: 9, name: 'Mnemonic n°9', input_id: 2},
     {id: 12, name: 'Mnemonic n°12', input_id: 3}
   ];
+
+  // MatPaginator Output
+  pageEvent: PageEvent;
 
   constructor() {
   }

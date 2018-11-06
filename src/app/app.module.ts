@@ -13,7 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UIModule } from './ui.module';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorIntl } from '@angular/material';
+import { CustomMatPaginatorIntl } from './customPaginatorClass';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { UIModule } from './ui.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     UIModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [{ provide: MatPaginatorIntl, useClass: CustomMatPaginatorIntl}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

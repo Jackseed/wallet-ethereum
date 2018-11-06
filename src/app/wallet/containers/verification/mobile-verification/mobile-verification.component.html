@@ -1,3 +1,97 @@
-<p>
-  mobile-verification works!
-</p>
+<div class="mat-body-2">
+  <form>
+    <div *ngIf="!pageEvent">
+        <div fxLayout="row" fxLayoutAlign="start">
+            <div fxFlex= "100%">
+    
+                <h3>N°{{mnemonics[0].id}}</h3>
+                <p>
+                  <mat-form-field appearance="fill" style="width:100%">
+                      <mat-label>{{mnemonics[0].name}}</mat-label>           
+                      <input matInput #{{mnemonics[0].input_id}}>
+                  </mat-form-field>
+                </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="pageEvent">
+      <div *ngIf="pageEvent.pageIndex === 0">
+          <div fxLayout="row" fxLayoutAlign="start">
+              <div fxFlex= "100%">
+      
+                  <h3>N°{{mnemonics[0].id}}</h3>
+                  <p>
+                    <mat-form-field appearance="fill" style="width:100%">
+                        <mat-label>{{mnemonics[0].name}}</mat-label>           
+                        <input matInput #{{mnemonics[0].input_id}}>
+                    </mat-form-field>
+                  </p>
+              
+              </div>
+          </div>
+      </div>
+
+      <div *ngIf="pageEvent.pageIndex === 1">
+          <div fxLayout="row" fxLayoutAlign="start">
+              <div fxFlex= "100%">
+      
+                  <h3>N°{{mnemonics[1].id}}</h3>
+                  <p>
+                    <mat-form-field appearance="fill" style="width:100%">
+                        <mat-label>{{mnemonics[1].name}}</mat-label>           
+                        <input matInput #{{mnemonics[1].input_id}}>
+                    </mat-form-field>
+                  </p>
+              
+              </div>
+          </div>
+      </div>
+
+      <div *ngIf="pageEvent.pageIndex === 2">
+          <div fxLayout="row" fxLayoutAlign="start">
+              <div fxFlex= "100%">
+      
+                  <h3>N°{{mnemonics[2].id}}</h3>
+                  <p>
+                    <mat-form-field appearance="fill" style="width:100%">
+                        <mat-label>{{mnemonics[2].name}}</mat-label>           
+                        <input matInput #{{mnemonics[2].input_id}}>
+                    </mat-form-field>
+                  </p>
+              
+              </div>
+          </div>
+      </div>
+
+      <div *ngIf="pageEvent.pageIndex === 3">
+          <div fxLayout="row" fxLayoutAlign="start">    
+                  <mat-form-field appearance="fill" style="width:100%">
+                    <mat-label>Password</mat-label>
+                    <input matInput #password>
+                  </mat-form-field>   
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="center">    
+                <button mat-raised-button (click)="submit(mnemonic.value)" color="primary">submit</button>
+          </div>
+
+      </div>
+
+    </div>
+  </form>
+
+  <div fxLayout="row" fxLayoutAlign="start">
+      <div fxFlexOffset="25%" fxFlex= "50%">
+        <mat-paginator
+          hidePageSize = true
+          pageIndex = 0
+          length = 4
+          pageSize = 1
+          (page)="pageEvent = $event">
+        </mat-paginator>
+      </div>
+  </div>
+  
+</div>

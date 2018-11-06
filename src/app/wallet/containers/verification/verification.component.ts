@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MediaChange, ObservableMedia} from '@angular/flex-layout';
 import {Subscription} from 'rxjs';
 
+
 export interface Mnemonic {
   id: number;
   name: string;
@@ -14,6 +15,7 @@ export interface Mnemonic {
   styleUrls: ['./verification.component.css']
 })
 export class VerificationComponent implements OnInit {
+
 
   mnemonics: Mnemonic[] = [
     {id: 4, name: 'Mnemonic n°4', input_id: 1},
