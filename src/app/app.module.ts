@@ -4,6 +4,8 @@ import { MnemonicComponent } from './wallet/containers/mnemonic/mnemonic.compone
 import { VerificationComponent } from './wallet/containers/verification/verification.component';
 import { WalletComponent } from './wallet/containers/wallet/wallet.component';
 import { TransactionComponent } from './wallet/containers/transaction/transaction.component';
+import { DekstopVerificationComponent } from './wallet/containers/verification/dekstop-verification/dekstop-verification.component';
+import { MobileVerificationComponent } from './wallet/containers/verification/mobile-verification/mobile-verification.component';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +22,8 @@ import { UIModule } from './ui.module';
     VerificationComponent,
     WalletComponent,
     TransactionComponent,
+    DekstopVerificationComponent,
+    MobileVerificationComponent
   ],
   imports: [
     BrowserModule,

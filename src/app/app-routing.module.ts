@@ -5,6 +5,7 @@ import { VerificationComponent } from './wallet/containers/verification/verifica
 import { WalletComponent } from './wallet/containers/wallet/wallet.component';
 import { TransactionComponent } from './wallet/containers/transaction/transaction.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/wallet', pathMatch: 'full' },
   { path: 'mnemonic', component: MnemonicComponent },
